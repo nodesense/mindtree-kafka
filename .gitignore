@@ -50,6 +50,8 @@ out/
 # JIRA plugin
 atlassian-ide-plugin.xml
 
+target 
+
 # Cursive Clojure plugin
 .idea/replstate.xml
 
