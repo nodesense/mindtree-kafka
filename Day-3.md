@@ -1,18 +1,21 @@
 
 below is content for gk-file-source.properties
 
+
+```json
 name=gk-file-source
 connector.class=FileStreamSource
 tasks.max=1
 file=/root/gopal/input-file.txt
 topic=gk-file-content
 
-
+```
 
 
  touch input-file.txt
 
  confluent list connectors
+ 
  confluent status connectors
  
  confluent load gk-file-source -d gk-file-source.properties
@@ -36,17 +39,19 @@ topic=gk-file-content
  
  
 touch gk-file-sink.properties
+
 touch output-file.txt
 
 paste below to gk-file-sink.properties
 
 
+```json
 name=gk-file-sink
 connector.class=FileStreamSink
 tasks.max=1
 file=/root/gopal/output-file.txt
 topics=gk-file-content
-
+```
 
 
 
