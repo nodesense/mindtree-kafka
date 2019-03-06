@@ -20,7 +20,7 @@ outside mysql shell
 
 /root/gopal >       touch gk-mysql-product-source.json
 
-
+```json
 
 {
   "name": "gk-mysql-product-source",
@@ -41,6 +41,7 @@ outside mysql shell
   }
 }
   
+```
   
   
   confluent load gk-mysql-product-source -d gk-mysql-product-source.json
@@ -61,9 +62,9 @@ outside mysql shell
     
     touch gk-mysql-product-sink.properties
     
+ ```json    
     
-    
-  name=gk-mysql-product-sink
+ name=gk-mysql-product-sink
 connector.class=io.confluent.connect.jdbc.JdbcSinkConnector
 tasks.max=1
 topics=products
@@ -74,8 +75,7 @@ key.converter.schema.registry.url=http://localhost:8081
 value.converter=io.confluent.connect.avro.AvroConverter
 value.converter.schema.registry.url=http://localhost:8081
 
-
-
+```
 
 
 confluent load gk-mysql-product-sink -d gk-mysql-product-sink.properties
