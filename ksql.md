@@ -1,4 +1,12 @@
-ksql-datagen quickstart=users format=json topic=mindtree_users maxInterval=5000
+
+SHOW STREAMS;
+SHOW TABLES;
+SHOW TOPICS;
+SHOW QUERIES;
+
+
+ksql-datagen quickstart=users format=avro topic=mindtree_users maxInterval=5000
+ksql-datagen quickstart=pageviews format=avro topic=mindtree_pageviews maxInterval=5000
 
 
 mindtree_users;
@@ -28,7 +36,6 @@ SELECT userid AS userid, regionid \
 FROM mindtree_users_stream \
 where gender='FEMALE';
 
-ksql-datagen quickstart=pageviews format=avro topic=mindtree_pageviews maxInterval=5000
 
  1552106259683 | 'User_4' | 'Page_80' ]) ts:1552106260558
 
