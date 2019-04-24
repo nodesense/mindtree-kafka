@@ -25,6 +25,9 @@ mindtree_users;
 CREATE STREAM mindtree_users_stream (userid varchar, regionid varchar, gender varchar) WITH \
 (kafka_topic='mindtree_users', value_format='JSON');
 
+
+DESCRIBE mindtree_users_stream;
+
 Non Persistent
 
 select userid, regionid, gender from mindtree_users_stream where gender='FEMALE';
