@@ -1,7 +1,10 @@
 
 SHOW STREAMS;
+
 SHOW TABLES;
+
 SHOW TOPICS;
+
 SHOW QUERIES;
 
 
@@ -74,6 +77,7 @@ LEFT JOIN mindtree_users_stream \
 
 
 select *  from mindtree_pageviews_enriched_stream;
+
 select *  from mindtree_pageviews_enriched_stream_males;
 
 CREATE TABLE mindtree_pageviews_region_table \
